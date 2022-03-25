@@ -7,13 +7,39 @@
 :root {
     --bg-user: #808080;
     --border-generate: #9C609D;
-    --bg-body: #B91450;
+    --primary: #B91450;
+    --bg-btn: #CCCCCC;
 }
 
 body {
-    background-color: var(--bg-body);
+    background-color: var(--primary);
+}
+
+a {
+    text-decoration: none;
 }
 
 .rounded_7 {
     border-radius: 0.7rem;
+}
+
+label {
+    color: var(--primary);
+}
+
+input,
+select {
+    width: 215px;
+    height: 35px;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    text-align: center;
+}
+
+button {
+    color: var(--primary);
+    background-color: var(--bg-btn);
+    padding: 3px 10px;
+    border: 1px solid var(--primary);
+    border-radius: 12px;
 }
