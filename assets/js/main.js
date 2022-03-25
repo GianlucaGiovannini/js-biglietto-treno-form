@@ -1,7 +1,8 @@
-const prezzoKm = 0.21 // prezzo al km
-
 // chiedere il nome all'utente 
 function generate() {
+
+
+
     let userName = document.getElementById("nome").value;
     document.getElementById("stamp_nome").innerHTML = userName;
 
@@ -9,19 +10,33 @@ function generate() {
     document.getElementById("stamp_km").innerHTML = kmPercorso;
 
     let userEta = document.getElementById("fascia_eta").value;
-    document.getElementById("stamp_eta").innerHTML = userEta;
+
+    const prezzoKm = 0.21 // prezzo al km
+    const prezzoUtente = prezzoKm * kmPercorso;
+    const prezzoMinori = prezzoUtente * 0.8;
+    const prezzoOver_65 = prezzoUtente * 0.6;
+
+    console.log(prezzoKm, prezzoUtente, prezzoMinori, prezzoOver_65)
+
+    if (userEta === "minorenne") {
+        document.getElementById("tipo_offerta").innerHTML = "Sconto Minorenne";
+        document.getElementById("price_ticket").innerHTML = "€ " + prezzoMinori.toFixed(2)
+    } else if (userEta === "over 65") {
+        document.getElementById("tipo_offerta").innerHTML = "Sconto Over 65";
+        document.getElementById("price_ticket").innerHTML = "€ " + prezzoOver_65.toFixed(2)
+    } else {
+        document.getElementById("tipo_offerta").innerHTML = "Nessuna offerta";
+        document.getElementById("price_ticket").innerHTML = "€ " + prezzoUtente.toFixed(2)
+    }
+
+    const carrozza = Math.floor(Math.random() * 11);
+    document.getElementById("n_carrozza").innerHTML = carrozza;
+
+    const codiceCP = Math.floor(Math.random() * 100000);
+    document.getElementById("n_cp").innerHTML = codiceCP;
+
+
+
+
+
 }
-
-//const prezzoTicket = prezzoKm * kmPercorso // prezzo base del biglietto
-
-//const prezzoMinorenni = prezzoTicket * 0.8 // prezzo scontato per minorenni
-
-//const prezzoOver65 = prezzoTicket * 0.6 // prezzo scontato per gli over 65
-
-/* if (userEta < 18) {
-    console.log(prezzoMinorenni.toFixed("2"))
-} else if (userEta >= 65) {
-    console.log(prezzoOver65.toFixed("2"))
-} else {
-    console.log(prezzoTicket.toFixed("2"))
-} */
