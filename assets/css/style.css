@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-user: #808080;
+    --border-generate: #9C609D;
+    --bg-body: #B91450;
+}
+
+body {
+    background-color: var(--bg-body);
+}
+
+.rounded_7 {
+    border-radius: 0.7rem;
+}
