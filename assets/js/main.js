@@ -7,7 +7,6 @@ function generate() {
 
     // km percorsi
     let kmPercorso = document.getElementById("km_percorso").value;
-    document.getElementById("stamp_km").innerHTML = kmPercorso;
 
     // età
     let userEta = document.getElementById("fascia_eta").value;
@@ -34,5 +33,4 @@ function generate() {
     // codice cp 
     const codiceCP = Math.floor(Math.random() * 100000);
     document.getElementById("n_cp").innerHTML = codiceCP;
-
 }

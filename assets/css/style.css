@@ -23,14 +23,23 @@ a {
     border-radius: 0.7rem;
 }
 
+.border_t_b {
+    border-top: 1px solid var(--bg-user);
+    border-bottom: 1px solid var(--bg-user);
+}
+
+.bg_nome_utente {
+    background-color: var(--bg-user);
+}
+
 label {
     color: var(--primary);
 }
 
 input,
 select {
-    width: 215px;
-    height: 35px;
+    width: 80%;
+    height: 40px;
     border: 1px solid var(--primary);
     border-radius: 10px;
     text-align: center;
@@ -42,4 +51,29 @@ button {
     padding: 3px 10px;
     border: 1px solid var(--primary);
     border-radius: 12px;
+}
+
+#ticket [class^=col] {
+    height: 200px;
+}
+
+.cards {
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20%;
+}
+
+.card_top {
+    font-weight: 700;
+}
+
+.card_bottom {
+    font-weight: 500;
+}
+
+@media screen and (max-width:768px) {
+    .cards {
+        border: 1px solid var(--bg-user);
+    }
 }
