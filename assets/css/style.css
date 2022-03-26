@@ -36,7 +36,8 @@ label {
     color: var(--primary);
 }
 
-input,
+input[type^="text"],
+input[type^="number"],
 select {
     width: 80%;
     height: 40px;
@@ -45,12 +46,17 @@ select {
     text-align: center;
 }
 
-button {
+button,
+input[type^="reset"] {
     color: var(--primary);
     background-color: var(--bg-btn);
     padding: 3px 10px;
     border: 1px solid var(--primary);
     border-radius: 12px;
+}
+
+.container {
+    box-shadow: 0 2px 16px 5px #353434;
 }
 
 #ticket [class^=col] {

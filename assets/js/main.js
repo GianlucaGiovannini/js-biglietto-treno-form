@@ -36,3 +36,11 @@ function generate() {
     const codiceCP = Math.floor(Math.random() * 100000);
     document.getElementById("n_cp").innerHTML = codiceCP;
 }
+
+function remove() {
+    document.getElementById("stamp_nome").innerHTML = "";
+    document.getElementById("tipo_offerta").innerHTML = "";
+    document.getElementById("n_carrozza").innerHTML = "";
+    document.getElementById("n_cp").innerHTML = "";
+    document.getElementById("price_ticket").innerHTML = "";
+}
