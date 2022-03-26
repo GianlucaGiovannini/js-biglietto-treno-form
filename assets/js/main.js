@@ -1,22 +1,21 @@
-// chiedere il nome all'utente 
 function generate() {
 
-    // nome
+    // chiedere nome 
     let userName = document.getElementById("nome").value;
     document.getElementById("stamp_nome").innerHTML = userName;
-    // km percorsi
+    // chiedere km percorsi
     let kmPercorso = document.getElementById("km_percorso").value;
 
-    // età
+    // chiedere età
     let userEta = document.getElementById("fascia_eta").value;
 
-    // prezzo al km
+    // calcolo prezzi biglietto
     const prezzoKm = 0.21
     const prezzoUtente = prezzoKm * kmPercorso;
     const prezzoMinori = prezzoUtente * 0.8;
     const prezzoOver_65 = prezzoUtente * 0.6;
 
-    // stampa 
+    // stampa risultati in base all'età
     if (userEta === "minorenne") {
         document.getElementById("tipo_offerta").innerHTML = "Sconto Minorenne";
         document.getElementById("price_ticket").innerHTML = "€ " + prezzoMinori.toFixed(2)
@@ -28,15 +27,16 @@ function generate() {
         document.getElementById("price_ticket").innerHTML = "€ " + prezzoUtente.toFixed(2)
     }
 
-    // carrozza 
+    // calcolo carrozza 
     const carrozza = Math.floor(Math.random() * 11);
     document.getElementById("n_carrozza").innerHTML = carrozza;
 
-    // codice cp 
+    // calcolo codice cp 
     const codiceCP = Math.floor(Math.random() * 100000);
     document.getElementById("n_cp").innerHTML = codiceCP;
 }
 
+// rimozione dati stampati al click 
 function remove() {
     document.getElementById("stamp_nome").innerHTML = "";
     document.getElementById("tipo_offerta").innerHTML = "";
