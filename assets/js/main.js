@@ -28,7 +28,7 @@ function generate() {
     }
 
     // calcolo carrozza 
-    const carrozza = Math.floor(Math.random() * 11);
+    const carrozza = Math.floor(Math.random() * 11 + 1);
     document.getElementById("n_carrozza").innerHTML = carrozza;
 
     // calcolo codice cp 
