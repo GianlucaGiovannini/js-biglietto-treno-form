@@ -46,7 +46,7 @@ select {
     text-align: center;
 }
 
-button,
+a.button,
 input[type^="reset"] {
     color: var(--primary);
     background-color: var(--bg-btn);
