@@ -15,6 +15,10 @@ function generate() {
     const prezzoMinori = prezzoUtente * 0.8;
     const prezzoOver_65 = prezzoUtente * 0.6;
 
+
+    document.getElementById("ticket").classList.add("d-block");
+
+
     // stampa risultati in base all'età
     if (userEta === "minorenne") {
         document.getElementById("tipo_offerta").innerHTML = "Sconto Minorenne";
@@ -26,6 +30,7 @@ function generate() {
         document.getElementById("tipo_offerta").innerHTML = "Nessuna offerta";
         document.getElementById("price_ticket").innerHTML = "€ " + prezzoUtente.toFixed(2)
     }
+
 
     // calcolo carrozza 
     const carrozza = Math.floor(Math.random() * 11 + 1);
@@ -43,4 +48,5 @@ function remove() {
     document.getElementById("n_carrozza").innerHTML = "";
     document.getElementById("n_cp").innerHTML = "";
     document.getElementById("price_ticket").innerHTML = "";
+    document.getElementById("ticket").classList.remove("d-block");
 }

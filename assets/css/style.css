@@ -60,6 +60,10 @@ input[type^="reset"] {
     box-shadow: 0 2px 16px 5px #353434;
 }
 
+#ticket {
+    display: none;
+}
+
 #ticket [class^=col] {
     height: 200px;
 }
